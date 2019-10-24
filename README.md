@@ -57,7 +57,6 @@ To evaluate the performance of the attack on cifar10, run
 
 ```
 python all_in_one_cifar10.py --source_models ResNet18 --transfer_models ResNet18 DenseNet121 GoogLeNet SENet18 --out_name=test.csv  --attacks ifgsm --num_batches=50 --batch_size=32
-
 ```
 [Checkpoints](https://drive.google.com/drive/folders/1RGtlPCc2vTqeQc5utOgLb1Y3_vIO5JVi?usp=sharing) of our models. You can replace the checkpoints paths in `cifar10_config.py`. 
 
@@ -86,6 +85,8 @@ optional arguments:
 ```
 
 Run `all_in_one_imagenet.py` to evaluate on imagenet with similar usage, with the imagenet val folder path. 
+
+To visualize the output csv of any of the above runs, simply open the `visualize.ipynb` notebook and change `df = pd.read_csv('ifgsm_imagenet_0.03_new.csv')` to read from your specific csv. Then run all the cells in the notebook to obtain a concise summary.
 
 ## Attribution
 
